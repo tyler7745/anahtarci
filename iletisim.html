@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>İletişim - Çilingir & Anahtarcı</title>
+    <title>İletişim</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <style>/* Genel Stiller */
+<style>/* Genel Stiller */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -108,12 +108,9 @@
             padding: 10px;
         }
         </style>
-    <header>
-        <h1>İletişim</h1>
-    </header>
-
-    <nav>
-        <ul>
+    <nav class="nav-container">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links">
             <li><a href="index.html">Ana Sayfa</a></li>
             <li><a href="hizmetler.html">Hizmetler</a></li>
             <li><a href="hakkimizda.html">Hakkımızda</a></li>
@@ -121,16 +118,20 @@
         </ul>
     </nav>
 
-    <section class="page-content">
-        <h2>Bize Ulaşın</h2>
-        <p>📞 7/24 bize ulaşabilirsiniz.</p>
-        <p><strong>Telefon:</strong> <a href="tel:+905538489089" class="call-btn">+90 553 848 90 89</a></p>
-        <button onclick="window.location.href='tel:+905538489089'" class="call-btn">Hemen Ara</button>
-        <p>📍 <strong>Adres:</strong> Muratdede, 227/5. Sk. 9-1, 20010 Merkezefendi/Denizli
+    <section>
+        <h1>İletişim</h1>
+        <p>Bize ulaşmak için telefon numaramızı arayabilirsiniz.</p>
+        <a href="tel:+905538489089" class="call-btn">📞 0553 848 90 89</a>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Çilingir & Anahtarcı - Tüm hakları saklıdır.</p>
-    </footer>
+    <script>
+        function toggleMenu() {
+            var navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+
 </body>
 </html>
+
+
