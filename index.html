@@ -37,7 +37,7 @@
 
         nav ul li {
             display: inline-block;
-            margin: 0 15px;
+            margin: 0 10px;
         }
 
         nav ul li a {
@@ -59,7 +59,7 @@
             background: url('img/hero-bg.jpg') no-repeat center center/cover;
             color: white;
             text-align: center;
-            padding: 120px 20px;
+            padding: 100px 20px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -68,7 +68,7 @@
 
         .hero-overlay {
             background: rgba(0, 0, 0, 0.6);
-            padding: 80px 20px;
+            padding: 60px 20px;
             border-radius: 10px;
             width: 90%;
             max-width: 900px;
@@ -184,6 +184,53 @@
             padding: 15px;
             font-size: 14px;
         }
+
+        /* Mobil Uyumluluk */
+        @media (max-width: 768px) {
+            nav ul li {
+                display: block;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 70px 20px;
+            }
+
+            .hero-overlay {
+                padding: 40px 15px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .call-btn {
+                font-size: 16px;
+                padding: 10px 25px;
+            }
+
+            .info-sections {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .info-box {
+                width: 90%;
+            }
+
+            .service-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .service {
+                width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -192,7 +239,7 @@
         <div class="hero-overlay">
             <h1>🔒 Hızlı ve Güvenilir Çilingir Hizmeti 🔑</h1>
             <p>7/24 Acil Çilingir Hizmeti • Denizli'nin Her Noktasına Servis</p>
-            <button onclick="window.location.href='tel:+905538489089'" class="call-btn">📞Tıkla Ara</button>
+            <button onclick="window.location.href='tel:+905538489089'" class="call-btn">📞 Hemen Ara</button>
         </div>
     </header>
 
