@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İletişim - Çilingir & Anahtarcı</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <style>/* Genel Stiller */
+    <style>
+        /* Genel Stiller */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -94,6 +92,7 @@
             border-radius: 5px;
             transition: background 0.3s;
             cursor: pointer;
+            display: inline-block;
         }
         
         .call-btn:hover {
@@ -107,7 +106,10 @@
             text-align: center;
             padding: 10px;
         }
-        </style>
+    </style>
+</head>
+<body>
+
     <header>
         <h1>İletişim</h1>
     </header>
@@ -126,12 +128,13 @@
         <h2>Bize Ulaşın</h2>
         <p>📞 7/24 bize ulaşabilirsiniz.</p>
         <p><strong>Telefon:</strong> <a href="tel:+905538489089" class="call-btn">+90 553 848 90 89</a></p>
-        <button onclick="showContact()" class="call-btn">Hemen Ara</button>
-        <p>📍 <strong>Adres:</strong> Muratdede, 227/5. Sk. 9-1, 20010 Merkezefendi/Denizli
+        <a href="tel:+905538489089" class="call-btn">📞 Hemen Ara</a> <!-- Buton artık çalışıyor -->
+        <p>📍 <strong>Adres:</strong> Muratdede, 227/5. Sk. 9-1, 20010 Merkezefendi/Denizli</p>
     </section>
 
     <footer>
         <p>&copy; 2025 Çilingir & Anahtarcı - Tüm hakları saklıdır.</p>
     </footer>
+
 </body>
 </html>
