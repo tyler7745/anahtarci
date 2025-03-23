@@ -12,34 +12,21 @@
             padding: 0;
             background-color: #fdd835;
             color: #222;
-        }
-
-        /* Başlık Alanı */
-        header {
-            background: #222;
-            color: white;
             text-align: center;
-            padding: 50px 20px;
         }
 
         /* Navigasyon */
         nav {
             background: black;
             padding: 10px 0;
-            text-align: center;
         }
 
         nav ul {
             list-style: none;
-            margin: 0;
-            padding: 0;
             display: flex;
             justify-content: center;
             gap: 20px;
-        }
-
-        nav ul li {
-            display: inline-block;
+            padding: 0;
         }
 
         nav ul li a {
@@ -48,8 +35,6 @@
             font-size: 18px;
             font-weight: bold;
             padding: 10px 15px;
-            display: block;
-            transition: color 0.3s;
         }
 
         nav ul li a:hover {
@@ -65,7 +50,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
         }
 
         .hero-overlay {
@@ -83,117 +67,145 @@
 
         .hero p {
             font-size: 22px;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
 
-        /* Butonlar */
-        .more-btn,
+        /* Tıkla Ara Butonu */
         .call-btn {
-            display: inline-block;
-            padding: 12px 20px;
-            border-radius: 5px;
-            font-size: 18px;
-            font-weight: bold;
-            text-decoration: none;
-            transition: background 0.3s, transform 0.2s;
-        }
-
-        .more-btn {
-            background: white;
-            color: #222;
-        }
-
-        .more-btn:hover {
-            background: #ddd;
-        }
-
-        .call-btn {
-            background: #fdd835;
+            background: #FFC107;
             color: black;
+            font-size: 22px;
+            font-weight: bold;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
 
         .call-btn:hover {
-            background: #ffcc00;
+            background: #ff9800;
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
         }
 
-        /* Hakkımızda, Hizmetler, İletişim ve Bölgelerimiz Bölümü */
-        .info-sections {
+        /* Hizmetler Bölümü */
+        .services {
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .services h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #fff;
+            background: black;
+            display: inline-block;
+            padding: 10px 30px;
+            border-radius: 8px;
+        }
+
+        /* Hizmet Resimleri */
+        .service-images {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin: 40px auto;
-            max-width: 1100px;
-            text-align: center;
+            align-items: center;
+            gap: 30px;
             flex-wrap: wrap;
         }
 
-        .info-box {
-            background: #222;
-            color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 23%;
-            transition: transform 0.3s ease;
+        .service-box {
+            text-align: center;
+            width: 30%;
         }
 
-        .info-box:hover {
-            transform: translateY(-5px);
-        }
-
-        /* Hakkımızda Resmi */
-        .about-img {
+        .service-box img {
             width: 100%;
-            max-width: 200px;
+            max-width: 250px;
             border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Hizmet Yazıları */
+        .service-box p {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fdd835;
+            margin-top: 10px;
+            background: black;
+            padding: 12px;
+            border-radius: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Ekstra Bölümler (İletişim, Hakkımızda, Bölgelerimiz) */
+        .extra-sections {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .extra-box {
+            background: black;
+            color: #fdd835;
+            padding: 30px;
+            border-radius: 10px;
+            width: 30%;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        }
+
+        .extra-box h2 {
+            font-size: 24px;
             margin-bottom: 10px;
         }
 
-        /* Footer */
-        footer {
-            background: black;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            font-size: 14px;
+        .extra-box p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .extra-box a {
+            display: inline-block;
+            background: #fdd835;
+            color: black;
+            padding: 12px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        .extra-box a:hover {
+            background: #ffcc00;
         }
 
         /* Mobil Uyumluluk */
         @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                text-align: center;
-                padding: 0;
-            }
-
-            .hero {
-                padding: 70px 20px;
-            }
-
-            .hero-overlay {
-                padding: 40px 15px;
-            }
-
-            .hero h1 {
-                font-size: 28px;
-            }
-
-            .hero p {
-                font-size: 18px;
-            }
-
-            .call-btn {
-                font-size: 16px;
-                padding: 10px 25px;
-            }
-
-            .info-sections {
+            .service-images, .extra-sections {
                 flex-direction: column;
                 align-items: center;
             }
 
-            .info-box {
+            .service-box, .extra-box {
                 width: 90%;
+            }
+
+            .service-box img {
+                max-width: 200px;
             }
         }
     </style>
@@ -204,7 +216,7 @@
         <div class="hero-overlay">
             <h1>🔒 Hızlı ve Güvenilir Çilingir Hizmeti 🔑</h1>
             <p>7/24 Acil Çilingir Hizmeti • Denizli'nin Her Noktasına Servis</p>
-            <button onclick="window.location.href='tel:+905538489089'" class="call-btn">📞 Tıkla Ara</button>
+            <a href="tel:+905538489089" class="call-btn">📞 Tıkla Ara</a>
         </div>
     </header>
 
@@ -217,33 +229,29 @@
         </ul>
     </nav>
 
-    <section class="info-sections">
-        <div class="info-box">
-            <h2>🔑 Hizmetlerimiz</h2>
-            <p>Kapı açma, anahtar kopyalama ve kilit değişimi hizmetlerimizle 7/24 yanınızdayız.</p>
-            <a href="hizmetler.html" class="more-btn">Detaylı Bilgi</a>
-        </div>
-        <div class="info-box">
-            <h2>ℹ️ Hakkımızda</h2>
-            <img src="img/hakkimizda.jpg" alt="Hakkımızda" class="about-img">
-            <p>Denizli Çilingir olarak, hızlı ve güvenilir hizmet sunuyoruz.</p>
-            <a href="hakkimizda.html" class="more-btn">Bizi Tanıyın</a>
-        </div>
-        <div class="info-box">
-            <h2>📞 İletişim</h2>
-            <p>Bize hemen ulaşmak için telefon numaramızı arayabilirsiniz.</p>
-            <a href="tel:+905538489089" class="call-btn">📞 0553 848 90 89</a>
-        </div>
-        <div class="info-box">
-            <h2>📍 Bölgelerimiz</h2>
-            <p>Denizli'nin tüm bölgelerinde hizmet veriyoruz.</p>
-            <a href="bolgelerimiz.html" class="more-btn">Bölgelere Bak</a>
+    <section class="services">
+        <h1>Hizmetlerimiz</h1>
+        <div class="service-images">
+            <div class="service-box">
+                <img src="img/kapi-acma.jpg" alt="Kapı Açma">
+                <p>🚪 Kapı Açma</p>
+            </div>
+            <div class="service-box">
+                <img src="img/anahtar-kopyalama.jpg" alt="Anahtar Kopyalama">
+                <p>🔑 Anahtar Kopyalama</p>
+            </div>
+            <div class="service-box">
+                <img src="img/kilit-degisimi.jpg" alt="Kilit Değişimi">
+                <p>🔒 Kilit Değişimi</p>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Çilingir & Anahtarcı - Tüm hakları saklıdır.</p>
-    </footer>
+    <section class="extra-sections">
+        <div class="extra-box"><h2>ℹ️ Hakkımızda</h2><p>Denizli Çilingir olarak, güvenilir hizmet sunuyoruz.</p><a href="hakkimizda.html">Bizi Tanıyın</a></div>
+        <div class="extra-box"><h2>📍 Bölgelerimiz</h2><p>Denizli'nin tüm bölgelerinde hizmet veriyoruz.</p><a href="bolgelerimiz.html">Bölgelere Bak</a></div>
+        <div class="extra-box"><h2>📞 İletişim</h2><p>Hemen arayın!</p><a href="tel:+905538489089">📞 0553 848 90 89</a></div>
+    </section>
 
 </body>
 </html>
