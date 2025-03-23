@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ana Sayfa - Çilingir & Anahtarcı</title>
+    <title>Bölgelerimiz - Çilingir & Anahtarcı</title>
     <style>
         /* Genel Stiller */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #fdd835;
-            color: #222;
+            background-color: #000; /* Siyah Arka Plan */
+            color: white;
             text-align: center;
         }
 
@@ -20,7 +20,6 @@
             background: black;
             padding: 10px 0;
             text-align: center;
-            position: relative;
         }
 
         .nav-links {
@@ -38,70 +37,48 @@
             font-weight: bold;
             padding: 10px 15px;
             display: block;
-            transition: color 0.3s;
         }
 
         .nav-links li a:hover {
             color: #fdd835;
         }
 
-        /* Mobil Menü */
-        .menu-toggle {
-            display: none;
-            font-size: 28px;
-            color: white;
-            background: none;
-            border: none;
-            cursor: pointer;
-            position: absolute;
-            top: 10px;
-            right: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .menu-toggle {
-                display: block;
-            }
-
-            .nav-links {
-                flex-direction: column;
-                display: none;
-                position: absolute;
-                background: black;
-                width: 100%;
-                top: 50px;
-                left: 0;
-                padding: 10px 0;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .nav-links li {
-                display: block;
-                width: 100%;
-            }
-        }
-
         /* Başlık Alanı */
-        .hero {
-            background: black;
+        .page-header {
+            background: #fdd835; /* Sarı Arka Plan */
+            color: black;
+            padding: 50px 20px;
+        }
+
+        /* Bölgeler Listesi */
+        .regions {
+            background: #333; /* Koyu Gri Arka Plan */
+            padding: 40px 20px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .region-item {
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 10px auto;
             color: white;
-            padding: 80px 20px;
+            font-size: 20px;
+            font-weight: bold;
+            background: #444; /* Daha koyu gri kutular */
         }
 
-        .hero h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
+        .region-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(255, 255, 255, 0.2);
         }
 
-        .hero p {
-            font-size: 22px;
-            margin-bottom: 15px;
-        }
-
-        /* Çağrı Butonu */
+        /* Arama Butonu */
         .call-btn {
             background: #fdd835;
             color: black;
@@ -112,30 +89,50 @@
             cursor: pointer;
             border-radius: 5px;
             transition: background 0.3s;
+            display: block;
+            margin: 10px auto;
         }
 
         .call-btn:hover {
             background: #ffcc00;
         }
 
-        /* İçerik Alanı */
-        .content {
-            background: #e0e0e0;
-            padding: 40px 20px;
-            border-radius: 10px;
-            max-width: 800px;
-            margin: 20px auto;
+        /* Mobil Menü */
+        .menu-toggle {
+            display: none;
         }
 
-        .content h1 {
-            font-size: 28px;
-        }
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+                font-size: 28px;
+                color: white;
+                background: none;
+                border: none;
+                cursor: pointer;
+                position: absolute;
+                top: 10px;
+                right: 20px;
+            }
 
-        .content p {
-            font-size: 18px;
-            line-height: 1.5;
-        }
+            .nav-links {
+                flex-direction: column;
+                display: none;
+            }
 
+            .nav-links.active {
+                display: flex;
+            }
+
+            .regions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .region-item {
+                width: 90%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -144,6 +141,7 @@
     <nav class="nav-container">
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
         <ul class="nav-links">
+            <li><a href="index.html">Ana Sayfa</a></li>
             <li><a href="hizmetler.html">Hizmetler</a></li>
             <li><a href="hakkimizda.html">Hakkımızda</a></li>
             <li><a href="iletisim.html">İletişim</a></li>
@@ -152,16 +150,49 @@
     </nav>
 
     <!-- Başlık Alanı -->
-    <header class="hero">
-        <h1>🔒 Hızlı ve Güvenilir Çilingir Hizmeti 🔑</h1>
-        <p>7/24 Acil Çilingir Hizmeti • Denizli'nin Her Noktasına Servis</p>
-        <button onclick="window.location.href='tel:+905538489089'" class="call-btn">📞 Hemen Ara</button>
+    <header class="page-header">
+        <h1>📍 Bölgelerimiz</h1>
+        <p>Denizli'nin her bölgesinde 7/24 hizmet veriyoruz.</p>
     </header>
 
-    <!-- İçerik Alanı -->
-    <section class="content">
-        <h1>Profesyonel Çilingir Hizmetleri</h1>
-        <p>Denizli'de 7/24 çilingir hizmeti veriyoruz. Kapı açma, kilit değişimi ve anahtar kopyalama gibi hizmetler sunuyoruz.</p>
+    <!-- Bölgeler Listesi -->
+    <section class="regions">
+        <div class="region-item">
+            <h2>Pamukkale Çilingir Anahtarcı</h2>
+            <button onclick="window.location.href='tel:+905538489089'" class="call-btn">📞 Ara</button>
+        </div>
+        <div class="region-item">
+            <h2>Merkezefendi Çilingir Anahtarcı</h2>
+            <button onclick="window.location.href='tel:+905538489090'" class="call-btn">📞 Ara</button>
+        </div>
+        <div class="region-item">
+            <h2>Karaman Çilingir Anahtarcı</h2>
+            <button onclick="window.location.href='tel:+905538489091'" class="call-btn">📞 Ara</button>
+        </div>
+        <div class="region-item">
+            <h2>Adalet Çilingir Anahtarcı</h2>
+            <button onclick="window.location.href='tel:+905538489092'" class="call-btn">📞 Ara</button>
+        </div>
+        <div class="region-item">
+            <h2>Değirmenönü Çilingir Anahtarcı</h2>
+            <button onclick="window.location.href='tel:+905538489093'" class="call-btn">📞 Ara</button>
+        </div>
+        <div class="region-item">
+            <h2>Mehmetçik Çilingir Anahtarcı</h2>
+            <button onclick="window.location.href='tel:+905538489094'" class="call-btn">📞 Ara</button>
+        </div>
+        <div class="region-item">
+            <h2>Kınıklı Çilingir Anahtarcı</h2>
+            <button onclick="window.location.href='tel:+905538489095'" class="call-btn">📞 Ara</button>
+        </div>
+        <div class="region-item">
+            <h2>Akkonak Çilingir Anahtarcı</h2>
+            <button onclick="window.location.href='tel:+905538489096'" class="call-btn">📞 Ara</button>
+        </div>
+        <div class="region-item">
+            <h2>Fatih Çilingir Anahtarcı</h2>
+            <button onclick="window.location.href='tel:+905538489097'" class="call-btn">📞 Ara</button>
+        </div>
     </section>
 
     <!-- JavaScript Menüyü Aç/Kapat -->
