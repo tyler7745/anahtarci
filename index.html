@@ -5,6 +5,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Çilingir & Anahtarcı</title>
     <style>
+ /* Genel Stiller */
+ body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdd835;
+            color: #222;
+            text-align: center;
+        }
+
+        /* Navigasyon */
+        nav {
+            background: black;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            position: relative;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            color: #fdd835;
+        }
+
+        /* Dropdown Menü */
+        .dropdown {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background: black;
+            display: none;
+            flex-direction: column;
+            width: 200px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        .dropdown a {
+            padding: 10px;
+            color: white;
+            text-align: left;
+            display: block;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+
+        .dropdown a:hover {
+            background: #fdd835;
+            color: black;
+        }
+
+        /* Hover yapınca açılması */
+        nav ul li:hover .dropdown {
+            display: flex;
+        }
+
         /* Genel Stiller */
         body {
             font-family: 'Poppins', sans-serif;
@@ -226,7 +302,22 @@
             <li><a href="hizmetler.html">Hizmetler</a></li>
             <li><a href="hakkimizda.html">Hakkımızda</a></li>
             <li><a href="iletisim.html">İletişim</a></li>
-            <li><a href="bolgelerimiz.html">Bölgelerimiz</a></li>
+            <li>
+                <a href="#">Bölgelerimiz ▼</a>
+                <div class="dropdown">
+                    <a href="adalet.html">Adalet</a>
+                    <a href="pamukkale.html">Pamukkale</a>
+                    <a href="mehmetçik.html">Mehmetçik</a>
+                    <a href="adalet.html">Adalet</a>
+                    <a href="akkonak.html">Akkonak</a>
+                    <a href="değirmenönü.html">Değirmenönü</a>
+                    <a href="fatih.html">Fatih</a>
+                    <a href="karaman.html">Karaman</a>
+                    <a href="kınıklı.html">Kınıklı</a>
+                    <a href="merkezefendi.html">Merkezefendi</a>
+
+                </div>
+            </li>
         </ul>
     </nav>
 
