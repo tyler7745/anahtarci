@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Denizli Pamukkale çilingir ve anahtarcı hizmetleri. 7/24 kapı açma, kilit değiştirme ve anahtar kopyalama hizmetleri. Hemen arayın!">
+    <title>Denizli Pamukkale Çilingir & Anahtarcı</title>
+    <style>
+/* Genel Stiller */
+body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdd835;
+            color: #222;
+            text-align: center;
+        }
+
+        /* Navigasyon */
+        nav {
+            background: black;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            position: relative;
+            list-style: none;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 15px;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            color: #fdd835;
+        }
+
+        /* Dropdown Menü */
+        .dropdown {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background: black;
+            display: none;
+            flex-direction: column;
+            width: 200px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        .dropdown a {
+            padding: 10px;
+            color: white;
+            text-align: left;
+            display: block;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+
+        .dropdown a:hover {
+            background: #fdd835;
+            color: black;
+        }
+
+        /* Hover yapınca açılması */
+        nav ul li:hover .dropdown {
+            display: flex;
+        }
+
+        /* Genel Stiller */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fdd835;
+            text-align: center;
+        }
+
+        /* Navbar */
+        nav {
+            background: black;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 15px;
+        }
+
+        nav ul li a:hover {
+            color: #fdd835;
+        }
+
+        /* Hero Bölümü */
+        .hero {
+            background: url('img/gozler-cilingir.jpg') no-repeat center center/cover;
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Tıkla Ara Butonu */
+        .call-btn {
+            background: #FFC107;
+            color: black;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 12px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .call-btn:hover {
+            background: #ff9800;
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        /* İçerik Alanı */
+        .content {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: auto;
+            text-align: left;
+        }
+
+        .content h2 {
+            font-size: 28px;
+            color: black;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Hizmetler */
+        .services {
+            background: black;
+            color: #fdd835;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 26px;
+        }
+
+        .service-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .service-box {
+            background: #222;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        }
+
+        .service-box p {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: black;
+            color: white;
+            padding: 15px;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+
+        /* Mobil Uyumluluk */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .content {
+                text-align: center;
+            }
+
+            .service-list {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="hizmetler.html">Hizmetler</a></li>
+            <li><a href="hakkimizda.html">Hakkımızda</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+            <li>
+                <a href="#">Bölgelerimiz ▼</a>
+                <div class="dropdown">
+                    <a href="adalet.html">Adalet</a>
+                    <a href="pamukkale.html">Pamukkale</a>
+                    <a href="mehmetçik.html">Mehmetçik</a>
+                    <a href="adalet.html">Adalet</a>
+                    <a href="akkonak.html">Akkonak</a>
+                    <a href="değirmenönü.html">Değirmenönü</a>
+                    <a href="fatih.html">Fatih</a>
+                    <a href="karaman.html">Karaman</a>
+                    <a href="kınıklı.html">Kınıklı</a>
+                    <a href="merkezefendi.html">Merkezefendi</a>
+
+                </div>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Hero Bölümü -->
+    <header class="hero">
+        <div class="hero-overlay">
+            <h1>🔑 Denizli Pamukkale Çilingir</h1>
+            <p>7/24 kapı açma, kilit değişimi ve anahtar kopyalama</p>
+            <a href="tel:+905538489089" class="call-btn">📞 Tıkla Ara</a>
+        </div>
+    </header>
+
+    <!-- İçerik Alanı -->
+    <div class="content">
+        <h2>Pamukkale Çilingir & Anahtarcı Hizmetleri</h2>
+        <p>Denizli Pamukkale mahallesinde 7/24 acil çilingir ve anahtarcı hizmeti sunuyoruz. Profesyonel ekip ve uygun fiyat garantisi ile her türlü kapı açma, kilit değiştirme ve anahtar kopyalama işlemlerinizde yanınızdayız.</p>
+        <p>🔹 Kilitli kapıları zarar vermeden açma<br>
+           🔹 Oto çilingir ve immobilizer anahtar yapımı<br>
+           🔹 Çelik kapı, ev, ofis ve dükkan anahtar kopyalama<br>
+           🔹 Kilit değişimi ve tamiri</p>
+    </div>
+
+    <!-- Hizmetler Bölümü -->
+    <section class="services">
+        <h2>Hizmetlerimiz</h2>
+        <div class="service-list">
+            <div class="service-box">
+                <h3>🔓 Kapı Açma</h3>
+                <p>Kilitli veya anahtarı kaybolmuş kapıları açıyoruz.</p>
+            </div>
+            <div class="service-box">
+                <h3>🔑 Anahtar Kopyalama</h3>
+                <p>Ev, ofis, araba anahtarlarınızı kopyalama hizmeti.</p>
+            </div>
+            <div class="service-box">
+                <h3>🔒 Kilit Değişimi</h3>
+                <p>Güvenliğiniz için eski kilitlerinizi değiştiriyoruz.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Denizli Pamukkale Çilingir & Anahtarcı - Tüm Hakları Saklıdır.</p>
+    </footer>
+
+</body>
+</html>
